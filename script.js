@@ -1,5 +1,6 @@
 var minute=25;
 var second=0;
+var breakTime=5;
 var state=0; //0=idle/stopped; 1=paused; 2=running
 var run; //Global variable for the Interval
 var water= $('.water');
@@ -41,6 +42,7 @@ plus.onmousedown= function(){
       minute+= 5;
    }
    theMinutes.innerHTML= minute;
+   document.getElementsByClassName('minuteSession')[0].innerHTML= minute;
 };
 
 minus.onmousedown= function(){
@@ -59,6 +61,7 @@ minus.onmousedown= function(){
       minute-= 5;
    }
    theMinutes.innerHTML= minute;
+   document.getElementsByClassName('minuteSession')[0].innerHTML= minute;
 };
 
 start.onclick= function(){
@@ -83,6 +86,10 @@ reset.onclick= function(){
    theMinutes.innerHTML= minute;
 };
 
+function takeBreak(){
+   
+}
+
 function timeFlies(){
    if (state != 2){
       clearInterval(run);
@@ -96,6 +103,7 @@ function timeFlies(){
          if(minute <= 0){
             clearInterval(run);
             alert("stop");
+            takeBreak();
             return;
          }
 

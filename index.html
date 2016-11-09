@@ -5,27 +5,56 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Pomodoro clock</title>
-   <!-- <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> -->
    <link rel="stylesheet" href="index.css">
+   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 
 </head>
 <body>
 
-<div>
 
-   <button class="start">Start/pause</button><br>
-   <button class="reset">Reset</button><br>
-   <button class="plus">+</button>
-   <button class="minus">-</button><br>
-   <span>:</span>
-   <span class="seconds">00</span>
+
+<div class="panel">
+
+   <div class="controls">
+      <div class="controlButton cell plus">
+         <p>+</p>
+      </div>
+
+      <div class="sessionTime cell">
+         <p class="minuteSession">25</p>
+      </div>
+
+      <div class="controlButton cell minus">
+         <p>-</p>
+      </div>
+   </div>
+
+   <div class="reset">
+      <p>&#8634;</p>
+   </div>
+
+   <div class="controls">
+      <div class="controlButton cell">
+         <p>+</p>
+      </div>
+
+      <div class="breakTime cell">
+         <p class="minuteBreak">5</p>
+      </div>
+
+      <div class="controlButton cell">
+         <p>-</p>
+      </div>
+   </div>
 
 </div>
 
 <div class="clock">
-   <div class="tank">
+   <div class="tank start">
 
       <div class="minutes">5</div>
+      <div class="seconds">00</div>
+
       <div class="water"></div>
    </div>
 </div>

@@ -1,7 +1,6 @@
-
 *{
-   margin-bottom: 5px;
-   /*font-family: 'Oswald', sans-serif;*/
+   font-family: 'Aldrich', sans-serif;
+   user-select: none;
 }
 
 html{
@@ -17,16 +16,62 @@ body{
    height: 100%;
    background: rgb(54, 54, 54);
    color: white;
-   overflow-y: hidden;
-   text-align: center;
+   margin: 0;
 }
 
-.minutes{
-   position: absolute;
-   /*top: 75px;
-   left: 80px;*/
-   font-size: 120px;
+.panel{
+   height: auto;
+   min-width: 280px;
+   display: flex;
+   justify-content: space-around;
+}
+
+.controls{
+   font-size: 22px;
+   height: auto;
+   display: flex;
+   flex-flow: column;
+   justify-content: center;
+   align-items: center;
+   border: 3px solid rgb(0, 210, 93);
+   border-radius: 6px;
+}
+
+.cell{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-width: 35px;
+   min-height: 35px;
+}
+
+p{
+   margin: 0px;
+}
+
+.controlButton{
+   cursor: pointer;
+}
+
+.controlButton:hover{
+   background: #454545;
+}
+
+.reset{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 45px;
+   width: 45px;
    align-self: center;
+   cursor: pointer;
+   font-size: 35px;
+   border: 3px solid rgb(0, 210, 93);
+   border-radius: 50%;
+}
+
+.reset:hover{
+   background: #454545;
 }
 
 .clock{
@@ -37,7 +82,8 @@ body{
    border-radius: 50%;
    overflow: hidden;
    padding: 3px;
-   border: 3px solid rgb(0, 92, 201);
+   border: 3px solid rgb(0, 210, 93);
+   margin: 5px;
 }
 
 .tank{
@@ -50,13 +96,30 @@ body{
    width: 280px;
    border-radius: 50%;
    overflow: hidden;
+   cursor: pointer;
 }
 
+.minutes{
+   position: absolute;
+   align-self: center;
+   /*top: 75px;
+   left: 80px;*/
+   font-size: 120px;
+}
+
+.seconds{
+   position: absolute;
+   align-self: center;
+   bottom: 5px;
+   font-size: 35px;
+}
+
+
 .water{
-   position: relative;
+   position: absolute;
    top: 0px;
    height: 280px;
    min-width: 280px;
-   background: rgb(0, 92, 201);
+   background: rgb(0, 210, 93);
    z-index: -1;
 }
