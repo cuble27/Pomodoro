@@ -5,27 +5,39 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Pomodoro clock</title>
+   <!-- <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet"> -->
    <link rel="stylesheet" href="index.css">
 
 </head>
 <body>
 
-<div class="test">
+<div>
 
    <button class="start">Start/pause</button><br>
    <button class="reset">Reset</button><br>
    <button class="plus">+</button>
    <button class="minus">-</button><br>
-   <span class="minutes">25</span>
    <span>:</span>
    <span class="seconds">00</span>
 
 </div>
 
+<div class="clock">
+   <div class="tank">
+
+      <div class="minutes">5</div>
+      <div class="water"></div>
+   </div>
+</div>
 
 
 
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+<!-- Import jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Import plugin that overrides jQuery ".animate" method -->
+<script src="animatePlugin.js" charset="utf-8"></script>
+<!-- Import my JS sheet -->
 <script src="script.js" charset="utf-8"></script>
 </body>
 </html>

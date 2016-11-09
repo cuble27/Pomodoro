@@ -1,5 +1,7 @@
+
 *{
    margin-bottom: 5px;
+   /*font-family: 'Oswald', sans-serif;*/
 }
 
 html{
@@ -19,7 +21,42 @@ body{
    text-align: center;
 }
 
-.test{
+.minutes{
+   position: absolute;
+   /*top: 75px;
+   left: 80px;*/
+   font-size: 120px;
+   align-self: center;
+}
 
+.clock{
+   /*min-height: 280px;*/
+   max-height: 280px;
+   /*min-width: 280px;*/
+   max-width: 280px;
+   border-radius: 50%;
+   overflow: hidden;
+   padding: 3px;
+   border: 3px solid rgb(0, 92, 201);
+}
 
+.tank{
+   display: flex;
+   justify-content: center;
+   /*align-items: center;*/
+   top: 0px;
+   position: relative;
+   height: 280px;
+   width: 280px;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.water{
+   position: relative;
+   top: 0px;
+   height: 280px;
+   min-width: 280px;
+   background: rgb(0, 92, 201);
+   z-index: -1;
 }

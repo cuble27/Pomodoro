@@ -1,7 +1,8 @@
-// $(document).ready(function() {
 var minute=25;
 var second=0;
 var state=0; //0=idle/stopped; 1=paused; 2=running
+var run; //Global variable for the Interval
+var water= $('.water');
 
 var theMinutes=document.getElementsByClassName("minutes")[0];
 var theSeconds=document.getElementsByClassName("seconds")[0];
@@ -12,8 +13,20 @@ var minus= document.getElementsByClassName("minus")[0];
 var start= document.getElementsByClassName("start")[0];
 var reset= document.getElementsByClassName("reset")[0];
 
+function resetClock(){
+   clearInterval(run);
+   state= 0; //Stop the timer
+   water.stop(); //Stop the animation
+   water.css('top', '0px');
+   second= 0;
+   theSeconds.innerHTML= "00";
+}
+
 plus.onmousedown= function(){
-   state= 1;
+   if(state != 0){
+      resetClock(); //Reset the clock
+   }
+   state= 0;
    second=0;
    theSeconds.innerHTML= "00";
 
@@ -31,7 +44,10 @@ plus.onmousedown= function(){
 };
 
 minus.onmousedown= function(){
-   state= 1;
+   if(state != 0){
+      resetClock(); //Reset the clock
+   }
+   state= 0;
    second=0;
    theSeconds.innerHTML= "00";
 
@@ -46,32 +62,35 @@ minus.onmousedown= function(){
 };
 
 start.onclick= function(){
-   timeFlies();
    if (state == 2){
-      state= 1;
-
+      state= 1; //PAUSE the timer and the animation
+      water.pause();
+   }else if(state == 1){
+      state= 2; //RESUME the timer and the animation
+      water.resume();
    }else{
-      state= 2;
+      state= 2; //START the timer and the animation
+      water.animate({top: '280px'}, (minute*60)*1000);
+      console.log((minute*60)*1000);  //DELETE after completion
    }
+   timeFlies();
 
 };
 
-
 reset.onclick= function(){
-   state= 1;
+   resetClock();
    minute= 25;
-   second= 0;
-   theSeconds.innerHTML= "00";
    theMinutes.innerHTML= minute;
 };
 
 function timeFlies(){
-   var run= setInterval(function(){
-      // var start= performance.now();
-      if (state == 1){
-         clearInterval(run);
-         return;
-      }
+   if (state != 2){
+      clearInterval(run);
+      water.pause();
+      return;
+   }
+   run= setInterval(function(){
+      // var start= performance.now();  //Test the speed of this function
 
       if(second == 0){
          if(minute <= 0){
@@ -85,12 +104,23 @@ function timeFlies(){
          theMinutes.innerHTML = minute;
       }
       second--;
-      theSeconds.innerHTML = second;
+      if(second > 9){
+         theSeconds.innerHTML = second;
+      }else{
+         theSeconds.innerHTML = "0" + second;
+      }
+
 
       // var finish= performance.now();
       // console.log(finish-start);
    }, 1000);
 }
 
+$(document).ready(function() {
+   // $('.water').fadeOut('1000', function() {
+   // });
 
-// });
+   // $('.water').animate({top: '+='+x+'px'}, 2800);
+
+
+});
