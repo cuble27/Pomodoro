@@ -9,135 +9,93 @@ html{
 
 body{
    display: flex;
-   justify-content: center;
    align-items: center;
-   flex-direction: column;
-   /*width: 100%;*/
    height: 100%;
    background: rgb(54, 54, 54);
    color: white;
    margin: 0;
 }
 
+.container{
+   width: auto;
+}
+
 .clearboth{
    clear: both;
 }
 
-/*.col-sm-12{
-   clear: both;
-}*/
-
-.container{
+.resetButton{
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 100%;
+   width: 45px;
+   height: 45px;
+   margin-left: auto;
+   margin-right: auto;
+   border: 3px solid rgb(0, 210, 93);
+   border-radius: 50%;
+   font-size: 35px;
+
 }
-
-
 
 .controlPanel{
-   height: auto;
-   min-width: 280px;
-   display: flex;
-   justify-content: space-around;
-}
-
-.controls{
+   margin-left: auto;
+   margin-right: auto;
    width: 41px;
    font-size: 22px;
-   /* height: auto; */
-   display: flex;
-   flex-flow: column;
-   align-items: center;
-   /* justify-content: center; */
    border: 3px solid rgb(0, 210, 93);
    border-radius: 6px;
-}
-
-.cellControl{
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 35px;
-   height: 35px;
-}
-
-p{
-   margin: 0px;
-}
-
-.controlButton{
-   cursor: pointer;
 }
 
 .controlButton:hover{
    background: #454545;
 }
 
-.reset{
+.cellSize{
    display: flex;
    justify-content: center;
    align-items: center;
-   height: 45px;
-   width: 45px;
-   align-self: center;
-   cursor: pointer;
-   font-size: 35px;
-   border: 3px solid rgb(0, 210, 93);
+   height: 35px;
+   width: 35px;
+}
+
+.theClock{
+   margin-left: auto;
+   margin-right: auto;
+   width: 280px;
+   height: 280px;
+   border: 4px solid rgb(0, 210, 93);
    border-radius: 50%;
+   padding: 4px;
 }
 
-.reset:hover{
-   background: #454545;
-}
-
-.clock{
-   /*min-height: 280px;*/
-   /*max-height: 280px;*/
-   min-width: 280px;
-   max-width: 280px;
-   border-radius: 50%;
-   overflow: hidden;
-   padding: 3px;
-   border: 3px solid rgb(0, 210, 93);
-   margin: 5px;
-}
-
-.tank{
+.clockTank{
    display: flex;
    justify-content: center;
-   /* align-items: center; */
-   top: 0px;
+   align-items: center;
    position: relative;
-   height: 269px;
-   /* width: 280px; */
-   border-radius: 50%;
+   height: 100%;
+   width: 100%;
    overflow: hidden;
-   cursor: pointer;
+   border-radius: 50%;
+}
+
+.water{
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   top: 0px;
+   background: rgb(0, 210, 93);
+   z-index: -1;
 }
 
 .minutes{
    position: absolute;
-   align-self: center;
-   /*top: 75px;
-   left: 80px;*/
    font-size: 120px;
 }
 
 .seconds{
    position: absolute;
-   align-self: center;
    bottom: 5px;
    font-size: 35px;
-}
-
-
-.water{
-   position: absolute;
-   top: 0px;
-   height: 100%;
-   min-width: 100%;
-   background: rgb(0, 210, 93);
-   z-index: -1;
 }

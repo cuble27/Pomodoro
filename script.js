@@ -12,14 +12,14 @@ var theSeconds=document.getElementsByClassName("seconds")[0];
 
 var plusSession= document.getElementsByClassName("plusSession")[0];
 var minusSession= document.getElementsByClassName("minusSession")[0];
-var minuteSession= document.getElementsByClassName("minuteSession")[0];
+var minuteSession= document.getElementsByClassName("sessionTime")[0];
 
 var plusBreak= document.getElementsByClassName("plusBreak")[0];
 var minusBreak= document.getElementsByClassName("minusBreak")[0];
-var minuteBreak= document.getElementsByClassName("minuteBreak")[0];
+var minuteBreak= document.getElementsByClassName("breakTime")[0];
 
-var start= document.getElementsByClassName("start")[0];
-var reset= document.getElementsByClassName("reset")[0];
+var start= document.getElementsByClassName("startStop")[0];
+var reset= document.getElementsByClassName("resetButton")[0];
 
 
 plusBreak.onmousedown= function(){
@@ -90,7 +90,7 @@ start.onclick= function(){
    timeFlies();
 };
 
-function resetClock(){
+function resetthethetheClock(){
 
 }
 

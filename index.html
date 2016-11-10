@@ -6,6 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Pomodoro clock</title>
    <!-- Latest compiled and minified CSS -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="index.css">
@@ -14,51 +15,47 @@
 </head>
 <body>
 
+<!-- controls:cellControl controlButton-->
+   <!-- sessionTime plus/minusSession -->
+   <!-- breakTime plus/minusBreak -->
+
+<!-- clock -->
+   <!-- tank start -->
+      <!-- minutes seconds water -->
+
+
 <div class="container">
    <div class="row">
-      <div class="controls col-sm-4">
-         <div class="controlButton cellControl plusSession">
-            <p>+</p>
-         </div>
-
-         <div class="sessionTime cellControl">
-            <p class="minuteSession">25</p>
-         </div>
-
-         <div class="controlButton cellControl minusSession">
-            <p>-</p>
+      <div class="col-sm-4 col-xs-4 col-md-4">
+         <div class="controlPanel">
+            <div class="cellSize controlButton plusSession">+</div>
+            <div class="cellSize sessionTime">25</div>
+            <div class="cellSize controlButton minusSession">-</div>
          </div>
       </div>
 
-      <div class="reset col-sm-4">
-         <p>&#8634;</p>
+      <div class="col-sm-4 col-xs-4 col-md-4">
+         <div class="resetButton">&#8634;</div>
       </div>
 
-      <div class="controls col-sm-4">
-         <div class="controlButton cellControl plusBreak">
-            <p>+</p>
-         </div>
-
-         <div class="breakTime cellControl">
-            <p class="minuteBreak">5</p>
-         </div>
-
-         <div class="controlButton cellControl minusBreak">
-            <p>-</p>
+      <div class="col-sm-4 col-xs-4 col-md-4">
+         <div class="controlPanel">
+            <div class="cellSize controlButton plusBreak">+</div>
+            <div class="cellSize breakTime">5</div>
+            <div class="cellSize controlButton minusBreak">-</div>
          </div>
       </div>
 
-      <div class="clock col-sm-12">
-         <div class="tank start">
-
-            <div class="minutes">25</div>
-            <div class="seconds">00</div>
-
-            <div class="water"></div>
+      <div class="col-sm-12 col-xs-12 col-md-12">
+         <div class="theClock startStop">
+            <div class="clockTank">
+               <div class="minutes">25</div>
+               <div class="seconds">00</div>
+               <div class="water"></div>
+            </div>
          </div>
       </div>
-
-   </div>
+   </div class="row">
 </div>
 
 
@@ -68,8 +65,16 @@
 
 
 
+
+
+
+
+
+
+
+
+
 <!-- Import jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Import plugin that overrides jQuery ".animate" method -->
 <script src="animatePlugin.js" charset="utf-8"></script>
 <!-- Import my JS sheet -->
