@@ -5,59 +5,65 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Pomodoro clock</title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
    <link rel="stylesheet" href="index.css">
    <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 
 </head>
 <body>
 
+<div class="container">
+   <div class="row">
+      <div class="controls col-sm-4">
+         <div class="controlButton cellControl plusSession">
+            <p>+</p>
+         </div>
 
+         <div class="sessionTime cellControl">
+            <p class="minuteSession">25</p>
+         </div>
 
-<div class="panel">
-
-   <div class="controls">
-      <div class="controlButton cell plus">
-         <p>+</p>
+         <div class="controlButton cellControl minusSession">
+            <p>-</p>
+         </div>
       </div>
 
-      <div class="sessionTime cell">
-         <p class="minuteSession">25</p>
+      <div class="reset col-sm-4">
+         <p>&#8634;</p>
       </div>
 
-      <div class="controlButton cell minus">
-         <p>-</p>
+      <div class="controls col-sm-4">
+         <div class="controlButton cellControl plusBreak">
+            <p>+</p>
+         </div>
+
+         <div class="breakTime cellControl">
+            <p class="minuteBreak">5</p>
+         </div>
+
+         <div class="controlButton cellControl minusBreak">
+            <p>-</p>
+         </div>
       </div>
+
+      <div class="clock col-sm-12">
+         <div class="tank start">
+
+            <div class="minutes">25</div>
+            <div class="seconds">00</div>
+
+            <div class="water"></div>
+         </div>
+      </div>
+
    </div>
-
-   <div class="reset">
-      <p>&#8634;</p>
-   </div>
-
-   <div class="controls">
-      <div class="controlButton cell">
-         <p>+</p>
-      </div>
-
-      <div class="breakTime cell">
-         <p class="minuteBreak">5</p>
-      </div>
-
-      <div class="controlButton cell">
-         <p>-</p>
-      </div>
-   </div>
-
 </div>
 
-<div class="clock">
-   <div class="tank start">
 
-      <div class="minutes">5</div>
-      <div class="seconds">00</div>
 
-      <div class="water"></div>
-   </div>
-</div>
+
 
 
 

@@ -19,7 +19,24 @@ body{
    margin: 0;
 }
 
-.panel{
+.clearboth{
+   clear: both;
+}
+
+/*.col-sm-12{
+   clear: both;
+}*/
+
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+}
+
+
+
+.controlPanel{
    height: auto;
    min-width: 280px;
    display: flex;
@@ -27,22 +44,23 @@ body{
 }
 
 .controls{
+   width: 41px;
    font-size: 22px;
-   height: auto;
+   /* height: auto; */
    display: flex;
    flex-flow: column;
-   justify-content: center;
    align-items: center;
+   /* justify-content: center; */
    border: 3px solid rgb(0, 210, 93);
    border-radius: 6px;
 }
 
-.cell{
+.cellControl{
    display: flex;
    justify-content: center;
    align-items: center;
-   min-width: 35px;
-   min-height: 35px;
+   width: 35px;
+   height: 35px;
 }
 
 p{
@@ -76,8 +94,8 @@ p{
 
 .clock{
    /*min-height: 280px;*/
-   max-height: 280px;
-   /*min-width: 280px;*/
+   /*max-height: 280px;*/
+   min-width: 280px;
    max-width: 280px;
    border-radius: 50%;
    overflow: hidden;
@@ -89,11 +107,11 @@ p{
 .tank{
    display: flex;
    justify-content: center;
-   /*align-items: center;*/
+   /* align-items: center; */
    top: 0px;
    position: relative;
-   height: 280px;
-   width: 280px;
+   height: 269px;
+   /* width: 280px; */
    border-radius: 50%;
    overflow: hidden;
    cursor: pointer;
@@ -118,8 +136,8 @@ p{
 .water{
    position: absolute;
    top: 0px;
-   height: 280px;
-   min-width: 280px;
+   height: 100%;
+   min-width: 100%;
    background: rgb(0, 210, 93);
    z-index: -1;
 }
