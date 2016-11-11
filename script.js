@@ -178,13 +178,13 @@ function takeBreak(){
             clearInterval(run);
             state= 0;
 
-            if(confirm("Back to studying!")){
+            if(confirm("Back to work!")){
                water.css('background', 'rgb(0, 210, 93)');
                minute=sessionTime;
                timeFlies();
 
             }else{
-               alert("Nice try, back to study!");
+               alert("Nice try, back to work!");
                water.css('background', 'rgb(0, 210, 93)');
                minute=sessionTime;
                timeFlies();
