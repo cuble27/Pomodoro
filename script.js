@@ -125,7 +125,11 @@ function timeFlies(){
 
    }else if(state == 1){
       state= 2; //RESUME the timer and the animation
-      water.animate({top: '280px'}, (minute*60)*1000);
+      if(minute > 0){
+         water.animate({top: '280px'}, (minute*60)*1000);
+      }else{
+         water.animate({top: '280px'}, (second*1000));
+      }
 
    }else{
       state= 2; //START the timer and the animation
